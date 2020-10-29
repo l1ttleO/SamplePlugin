@@ -1,0 +1,14 @@
+name: TestPlugin
+version: ${project.version}
+main: org.l1ttle.testplugin.TestPlugin
+api-version: 1.16
+authors: [ l1ttle ]
+description: Ping, pong!
+website: https://github.com/l1ttle-org/test-plugin
+
+commands:
+  testperm:
+    description: Tests if the sender has a permission
+    permission: testplugin.testperm
+    permission-message: You do not have permission to use this command!
+    usage: /<command> <permission>
