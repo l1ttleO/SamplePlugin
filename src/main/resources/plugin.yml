@@ -12,3 +12,13 @@ commands:
     permission: testplugin.testperm
     permission-message: You do not have permission to use this command!
     usage: /<command> <player> <permission>
+
+permissions:
+  testplugin.testperm:
+    description: Allows execution of /testperm command
+    default: op
+  testplugin.*:
+    description: Wildcard permission
+    default: op
+    children:
+      testplugin.testperm: true
