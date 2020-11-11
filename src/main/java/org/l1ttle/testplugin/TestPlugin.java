@@ -25,7 +25,7 @@ public final class TestPlugin extends JavaPlugin implements Listener {
         getLogger().log(Level.INFO, "Pong! We are disabling");
         final boolean stopping = getServerStateProvider().isStopping();
         if (!stopping) {
-            getLogger().log(Level.SEVERE, "Reloading is bad. If you have any problems with your server, please use /stop" }
+            getLogger().log(Level.SEVERE, "Reloading is bad. If you have any problems with your server, please use /stop") }
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
