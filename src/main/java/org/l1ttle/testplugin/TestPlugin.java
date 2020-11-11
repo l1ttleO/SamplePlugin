@@ -27,7 +27,7 @@ public final class TestPlugin extends JavaPlugin implements Listener {
 
     @EventHandler
     void onReload() {
-        getLogger().severe("RELOAD DETECTED. Please avoid reloading! Reloading can cause many unexpected bugs.");
+        getLogger().log(Level.SEVERE, "RELOAD DETECTED. Please avoid reloading! Reloading can cause many unexpected bugs.");
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
