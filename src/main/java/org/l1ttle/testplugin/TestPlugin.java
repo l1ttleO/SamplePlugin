@@ -23,11 +23,9 @@ public final class TestPlugin extends JavaPlugin implements Listener {
     public void onDisable() {
         // Plugin shutdown logic
         getLogger().log(Level.INFO, "Pong! We are disabling");
-    }
-
-    @EventHandler
-    void onReload() {
-        getLogger().log(Level.SEVERE, "RELOAD DETECTED. Please avoid reloading! Reloading can cause many unexpected bugs.");
+        final boolean stopping = getServerStateProvider().isStopping();
+        if (!stopping) {
+            getLogger().log(Level.SEVERE, "Reloading is bad. If you have any problems with your server, please use /stop" }
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
