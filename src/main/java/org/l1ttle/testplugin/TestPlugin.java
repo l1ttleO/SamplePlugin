@@ -1,15 +1,13 @@
 package org.l1ttle.testplugin;
 
+import java.util.logging.Level;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.logging.Level;
 
 public final class TestPlugin extends JavaPlugin implements Listener {
 
@@ -23,8 +21,7 @@ public final class TestPlugin extends JavaPlugin implements Listener {
     public void onDisable() {
         // Plugin shutdown logic
         getLogger().log(Level.INFO, "Pong! We are disabling");
-        final boolean stopping = getServerStateProvider().isStopping();
-        if (!stopping) {
+        if (!getServer().isStopping()) {
             getLogger().log(Level.SEVERE, "Reloading is bad. If you have any problems with your server, please use /stop"); }
     }
 
