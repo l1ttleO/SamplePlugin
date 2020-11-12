@@ -6,7 +6,7 @@
 
     <groupId>org.l1ttle</groupId>
     <artifactId>test-plugin</artifactId>
-    <version>1.0</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>Test Plugin</name>
