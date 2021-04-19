@@ -7,7 +7,7 @@ description: Ping, pong!
 website: https://github.com/l1ttle-org/SamplePlugin
 
 commands:
-  testperm:
+  nick:
     description: Tests if the sender has a permission
     permission: testplugin.testperm
     permission-message: You do not have permission to use this command!
